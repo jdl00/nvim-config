@@ -33,4 +33,7 @@ require('pairs')
 require('indentline')
 require('filetree')
 require('keymappings')
+require('lisps')
+require('lspmason')
+require('coqsettings')
 

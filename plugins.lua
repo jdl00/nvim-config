@@ -21,7 +21,7 @@ return require('packer').startup(function()
     use 'windwp/nvim-autopairs'
 
     -- indent lines
-    use "lukas-reineke/indent-blankline.nvim"
+    use 'lukas-reineke/indent-blankline.nvim'
     
     -- File tree plugin
     use {
@@ -30,5 +30,17 @@ return require('packer').startup(function()
         'nvim-tree/nvim-web-devicons', -- optional
       },
     }
+
+
+    -- Auto completion
+    use {'ms-jpq/coq_nvim', branch='coq'}
+    use {'ms-jpq/coq.artifacts', branch='artifacts'}
+
+
+    -- Used to manage LSP's
+    use {'williamboman/mason.nvim'}
+    
+    -- Neovim language server
+    use 'neovim/nvim-lspconfig'
 end)
 
