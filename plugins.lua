@@ -35,12 +35,14 @@ return require('packer').startup(function()
     -- Auto completion
     use {'ms-jpq/coq_nvim', branch='coq'}
     use {'ms-jpq/coq.artifacts', branch='artifacts'}
-
-
+    
     -- Used to manage LSP's
-    use {'williamboman/mason.nvim'}
+    use 'williamboman/mason.nvim'
     
     -- Neovim language server
     use 'neovim/nvim-lspconfig'
+
+    -- Linting
+   use 'mfussenegger/nvim-lint' 
 end)
 

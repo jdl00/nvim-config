@@ -12,19 +12,15 @@ if vim.fn.empty(vim.fn.glob(packer_path)) > 0 then
   vim.cmd('packadd packer.nvim')
 end
 
-require('packer').startup(function()
-  -- Packer configuration here
-end)
-
--- Set the working directory to the location of your init.lua file
-vim.cmd('cd ' .. vim.fn.expand('~/.config/nvim'))
+-- Add the current directory to the lua path
+package.path = package.path .. ';' .. vim.fn.stdpath('config') .. '/?.lua'
 
 -- Your main configuration file
 require('settings')
+require('plugins')
 require('highlighting')
 require('cursor')
 require('keymappings')
-require('plugins')
 require('treesitter')
 require('linesettings')
 require('colors')
@@ -36,4 +32,5 @@ require('keymappings')
 require('lisps')
 require('lspmason')
 require('coqsettings')
+require('nvimlinter')
 
