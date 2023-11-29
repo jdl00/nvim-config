@@ -1,4 +1,4 @@
 -- colors.lua
 
--- Sets the color scheme to nordic
-vim.cmd.colorscheme "catppuccin-mocha"
+-- Sets the color scheme to poimandres
+vim.cmd('colorscheme poimandres')
