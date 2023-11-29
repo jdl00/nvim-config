@@ -2,7 +2,7 @@ vim.diagnostic.config({
     virtual_text = true,  -- Enable/disable virtual text
     signs = false,        -- Disable signs in the sign column
     underline = true,     -- Enable/disable underline
-    update_in_insert = false,
+    update_in_insert = true,
     severity_sort = true,
 })
 

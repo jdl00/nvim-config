@@ -12,7 +12,7 @@ return require('packer').startup(function()
     }
 
     -- Norder warm
-    use 'AlexvZyl/nordic.nvim'
+    use { 'catppuccin/nvim', as = 'catppuccin' }
 
     -- Smooth scrolling
     use 'karb94/neoscroll.nvim'
@@ -25,10 +25,8 @@ return require('packer').startup(function()
     
     -- File tree plugin
     use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-      },
+    'nvim-telescope/telescope-file-browser.nvim',
+    requires = { 'nvim-telescope/telescope.nvim', 'nvim-lua/plenary.nvim' }
     }
 
 
@@ -44,5 +42,15 @@ return require('packer').startup(function()
 
     -- Linting
    use 'mfussenegger/nvim-lint' 
+
+   -- formatting
+   use({
+       "stevearc/conform.nvim",
+        config = function()
+          require("conform").setup()
+        end,
+      })
+
+
 end)
 
