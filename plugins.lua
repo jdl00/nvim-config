@@ -12,7 +12,7 @@ return require("packer").startup(function()
 	})
 
 	-- Norder warm
-	use({ "catppuccin/nvim", as = "catppuccin" })
+	use("shaunsingh/nord.nvim")
 
 	-- Smooth scrolling
 	use("karb94/neoscroll.nvim")
@@ -50,14 +50,8 @@ return require("packer").startup(function()
 		end,
 	})
 
+	-- Green theme
 	use({
 		"olivercederborg/poimandres.nvim",
-		config = function()
-			require("poimandres").setup({
-				-- leave this setup function empty for default config
-				-- or refer to the configuration section
-				-- for configuration options
-			})
-		end,
 	})
 end)

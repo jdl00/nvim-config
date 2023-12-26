@@ -2,8 +2,7 @@
 
 require("lualine").setup({
 	options = {
-		theme = "poimandres",
-		section_separators = { left = "", right = "" },
-		component_separators = { left = "", right = "" },
+		theme = "nord",
+		options = { section_separators = "", component_separators = "" },
 	},
 })
